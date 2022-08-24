@@ -1,4 +1,4 @@
-footer{
+@include footer{
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -6,4 +6,8 @@ footer{
     color: white;
     text-align: center;
     background-color: #212529;
+}
+
+footer{
+    @include footer
 }

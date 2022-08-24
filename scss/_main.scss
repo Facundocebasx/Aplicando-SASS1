@@ -7,26 +7,12 @@ main{
     }
     div{
         display: flex;
+        margin: 22px;
         .compatible{
-            padding: 10px;
-            h3{
-                color: purple;
-                text-align: center;
-            }
-            p{
-                color: blue;
-            }
+            @include column($bgcolumn)
         }
         .rico{
-            display: flex;
-            padding: 10px;
-            h3{
-                color: purple;
-                text-align: center;
-            }
-            p{
-                color: blue;
-            }
+            @include column($bgcolumn)
         }
     }
     .card{
@@ -34,6 +20,7 @@ main{
         background-color: white;
         border-radius: 10px;
         box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        width:100%;
         }
         .container{
             position:relative;
@@ -94,4 +81,59 @@ main{
         }
     
     
+        $redes: (              /*Declaramos nuestro mapa*/
+        twitter: #55acee,
+        facebook:  #3a5795,
+        instagram: #f0197d
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+
+@each $red, $color in $redes {
+   .caja--#{$red} {
+       background-color: $color;
+   }
+}
+
+.redsocial{
+    width: 180px;
+    height: 0px;
+    margin: 20px;
+    color:white;
+    text-align: center;
+    padding: 50px;
+    display: block;
+}
+.boton {
+	width:100px;
+	height:50px;
+	background-color:white;
+	text-align:center;
+	color:black;
+	border-radius:20px;
+	border:1px solid black;
+}
+
+.boton--aceptar{
+	@extend .boton;
+	background-color:green;
+	color:yellow;
+}
+
+.boton--cancelar{
+	@extend .boton;
+	background-color:red;
+	color:yellow;
+}
+
+@mixin column ($bgcolumn){
+    padding: 10px;
+            h3{
+                color: $black;
+                text-align: center;
+            }
+            p{
+                color: $black;
+            }
+}
+
 }

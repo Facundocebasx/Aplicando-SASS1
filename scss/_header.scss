@@ -1,4 +1,4 @@
-header {
+@include header{
     padding: 10px;
     .img{
         text-align: center;
@@ -14,21 +14,20 @@ header {
     }
     h1{
         text-align: center;
-        color: blue;
+        color: black;
     }
     h3{
         font-weight: normal;
         font-style: italic;
         text-align: center;
-        .remarcar{
-            font-weight: bold;
-            color: green;
-            &:hover{
-                color: purple;
-            }
-        }
+        
     }
     .banerr{
     border-radius: 0;
+    margin: 0;
 }
+}
+
+header {
+   @include header;
 }
