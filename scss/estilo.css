@@ -19,7 +19,7 @@ header .img img {
 header .img img:hover {
   border: red solid;
 }
-header h1 {
+header h1 { 
   text-align: center;
   color: blue;
 }
